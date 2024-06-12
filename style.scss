@@ -1,0 +1,15 @@
+// Importing Partials files
+@use './src/sass/partials/globals';
+@use './src/sass/partials/variables' as *;
+@use './src/sass/partials/mixins';
+
+// Importing Components files
+// @use './src/sass/components/addingMembers';
+@use './src/sass/components/addStudents';
+@use './src/sass/components/editStudents';
+@use './src/sass/components/facultyManagement';
+@use './src/sass/components/lectureManagement';
+// @use './src/sass/components/studentSearch';
+@use './src/sass/components/userLogin';
+@use './src/sass/components/studentAffairs';
+@use './src/sass/components/studentLectureSearch';

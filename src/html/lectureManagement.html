@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academia Navigator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../dist/style.css">
+</head>
+<body>
+    <!-- صفحة ادارة المحاضرات والبحث عنها -->
+    <main class="main">
+        <!-- Log Out and History section -->
+        <div class="lecture-log-out icon"><a href="userLogin.html"><i class="fa-solid fa-power-off"></i></a></div>
+        <!-- This div shows the current date -->
+        <div class="lecture-date"><h3>08/06/2024 - Saturday</h3></div>
+        <!-- Form -->
+        <div id="controlPanel" class="controlPanel">
+            <!-- The header of the panel page -->
+            <div class="panel-header">
+                <h2>المحاضرات الحالية</h2>
+            </div>
+            <!-- The list items of the panel page -->
+            <div class="list-items">
+                <!-- <ul>
+                    <li>اسم المادة - اسم الكاتب - الشعبة - المكان</li>
+                    <li>اسم المادة - اسم الكاتب - الشعبة - المكان</li>
+                    <li>اسم المادة - اسم الكاتب - الشعبة - المكان</li>
+                </ul> -->
+                <input type="text" placeholder="اسم المادة">
+                <input type="text" placeholder="اسم الدكتور">
+                <input type="text" placeholder="الفرقة">
+                <input type="text" placeholder="الشعبة">
+            </div>
+            <a href="studentLectureSearch.html" class="btn btn-search">بحث</a>
+        </div>
+      
+        <!-- List of links -->
+        <div class="lec-menu" id="links-list">
+            <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+
+            <div class="lec-links list-links">
+                <a href="lectureManagement.html">الرئيسية</a>
+                <a href="addStudents.html">اضافة طالب جديد</a>
+                <a href="editStudents.html">إدارة سجلات الطلاب</a>
+                <a href="studentAffairs.html">إدارة شئون الطلاب</a>
+                <a href="facultyManagement.html">إدارة أعضاء هيئة التدريس </a>
+                <!-- <a href="studentAffairs.html">إدارة الدوام والدراسة</a> -->
+                <!-- <a href="addingMembers.html">تعديل سجلات الطلاب</a> -->
+            </div>
+        </div>
+    </main>
+    <script src="../../main.js"></script>
+</body>
+</html>

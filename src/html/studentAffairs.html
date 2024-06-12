@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../../dist/style.css">
+</head>
+<body>
+  <!-- ادارة شؤون الطلاب -->
+<main id="main" class="main">
+    <!-- Log Out and History section -->
+    <div class="affairs-log-out icon"><a href="userLogin.html"><i class="fa-solid fa-power-off"></i></a></div>
+    <!-- This div shows the current date -->
+    <div class="affairs-date"><h3>08/06/2024 - Saturday</h3></div>
+    <!-- Form -->
+      <form method="post" class="form-wrapper" id="form-wrapper">
+        <!-- The header of the student affairs page -->
+          <h1>إدارة شؤون الطلاب</h1>
+          <!-- search input -->
+          <div class="search-input">
+              <input type="text" placeholder="رقم القومى او اسم الطالب">
+              <button type="submit" class="btn search-btn-affairs">بحث</button>
+          </div>
+          <!-- Student info buttons -->
+          <!-- <div class="student-info-btns">
+              <button type="button" class="btn btn-grade">الفرقة</button>
+              <button type="button" class="btn btn-depart">الشعبة</button>
+              <button type="button" class="btn btn-add">أضف الطالب</button>
+          </div> -->
+          <div class="input-fields">
+              <!-- <input type="text" placeholder="اسم الطالب">
+              <input type="text" placeholder="القسم">
+              <input type="text" placeholder="الفرقة">
+              <input type="text" placeholder="رقم القومى"> -->
+
+              <select class="affairs-select affairs-department">
+                  <option value="القسم">القسم</option>
+                  <option value="Computer Science">Computer Science</option>
+                  <option value="Accounting and Adminstration">Accounting and Adminstration</option>
+                  <option value="Systems and Information">Systems and Information</option>
+              </select>
+              <select class="affairs-select affairs-grade-year">
+                <option value="الفرقة">الفرقة</option>
+                <option value="First Grade">First Year</option>
+                <option value="Second Grade">Second Year</option>
+                <option value="Third Grade">Third Year</option>
+                <option value="Fourth Grade">Fourth Year</option>
+            </select>
+            <select class="affairs-select grade-year">
+              <option value="المواد">المواد</option>
+              <option value="Subject">Subject 1</option>
+              <option value="Subject">Subject 2</option>
+              <option value="Subject">Subject 3</option>
+              <option value="Subject">Subject 4</option>
+              <option value="Subject">Subject 5</option>
+          </select>
+          </div>
+          <div class="affairs-btns">
+            <a href="#" class="btn btn-edit">تعديل بيانات الطالب</a>
+            <a href="addStudents.html" class="btn btn-addNew">اضافة طالب جديد</a>
+          </div>
+      </form>
+
+      <!-- List of links -->
+      <div class="affairs-menu" id="links-list">
+        <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+
+        <div class="affairs-links list-links">
+            <a href="lectureManagement.html">الرئيسية</a>
+                <a href="addStudents.html">اضافة طالب جديد</a>
+                <a href="editStudents.html">إدارة سجلات الطلاب</a>
+                <a href="studentAffairs.html">إدارة شئون الطلاب</a>
+                <a href="facultyManagement.html">إدارة أعضاء هيئة التدريس </a>
+                <!-- <a href="studentAffairs.html">إدارة الدوام والدراسة</a> -->
+                <!-- <a href="addingMembers.html">تعديل سجلات الطلاب</a> -->
+        </div>
+    </div>
+  </div>
+</main>
+
+<!-- Javascript file -->
+ <!-- <script src="../../main.js"></script> -->
+</body>
+</html>

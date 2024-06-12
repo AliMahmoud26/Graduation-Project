@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edit Students</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../../dist/style.css">
+</head>
+<body>
+    <!-- ادارة سجلات الطلاب -->
+<main id="main" class="main">
+    <!-- Log Out and History section -->
+    <div class="edit-log-out icon"><a href="userLogin.html"><i class="fa-solid fa-power-off"></i></a></div>
+    <!-- This div shows the current date -->
+    <div class="edit-date"><h3>08/06/2024 - Saturday</h3></div>
+    <!-- Form -->
+    <form method="post" class="form-wrapper" id="form-wrapper">
+        <!-- The header of the edit student form page -->
+        <h1>Edit Students</h1>
+        <!-- Search Wrapper -->
+        <div class="search-wrapper">
+            <input type="text" placeholder="الرقم القومى او اسم الطالب">
+            <button type="submit" class="btn edit-search-btn">بحث</button>
+        </div>
+        <!-- Student Information Buttons -->
+        <div class="student-inputs">
+            <button type="button" class="btn btn-grade">الفرقة </button>
+            <button type="button" class="btn btn-depart">الشعبة</button>
+            <button type="button" class="btn btn-add">أضف الطالب</button>
+        </div>
+        <!-- div wrapper for the students information fields -->
+        <div class="student-info">
+            <div class="right-student-info">
+                <input type="text" placeholder="اسم الطالب">
+                <input type="text" placeholder="القسم">
+                <input type="text" placeholder="الفرقة">
+                <input type="text" placeholder="رقم القومى">
+            </div>
+            <div class="left-student-info">
+                <input type="text" placeholder="face_id">
+                <input type="text" placeholder="mac_id">
+                <input type="text" placeholder="المواد الدراسية">
+                <input type="text" placeholder="عدد سجل الحضور">
+            </div>
+        </div>
+    </form>
+    
+    <!-- List of links -->
+    <div class="edit-menu" id="links-list">
+        <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+
+        <div class="edit-links list-links">
+            <a href="lectureManagement.html">الرئيسية</a>
+            <a href="addStudents.html">اضافة طالب جديد</a>
+            <a href="editStudents.html">إدارة سجلات الطلاب</a>
+                <a href="studentAffairs.html">إدارة شئون الطلاب</a>
+                <a href="facultyManagement.html">إدارة أعضاء هيئة التدريس </a>
+                <!-- <a href="studentAffairs.html">إدارة الدوام والدراسة</a> -->
+                <!-- <a href="addingMembers.html">تعديل سجلات الطلاب</a> -->
+        </div>
+    </div>
+</main>
+</body>
+</html>

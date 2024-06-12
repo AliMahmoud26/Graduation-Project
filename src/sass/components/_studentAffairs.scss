@@ -1,0 +1,171 @@
+// Importing Partials files
+@use '../partials/variables' as *;
+
+// Styling the student affairs page
+.main {
+    position: relative;
+
+    .affairs-log-out {
+        position: absolute;
+        top: 19%;
+        left: 15%;
+        // background-color: $backgroundColor2;
+        padding: .5rem 1rem;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        cursor: pointer;
+
+        > a {
+            i {
+                color: $light;
+                font-size: 2rem;
+                transition: $transition;
+    
+                &:hover {
+                    color: $blueBtnColor;
+                }
+            }
+        }
+    }
+
+    .affairs-date {
+        position: absolute;
+        top: 18%;
+        right: 30%;
+                
+        h3 {
+            // font-size: 1rem;
+            background-color: $blueBtnColor;
+            color: $light;
+            padding: .25rem 4rem;
+            border-radius: .25rem;
+            font-weight: normal;
+        }
+    }
+
+    form {
+        // styling the search input
+        .search-input {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: .3rem;
+            margin-bottom: 1.25rem;
+
+            .search-btn-affairs {
+                background-color: $greenBtnColor;
+                transition: $transition;
+
+                &:hover {
+                    background-color: rgb($greenBtnColor, .7);
+                }
+            }
+        }
+        // Styling student info inputs
+        .student-info-btns {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: .5rem;
+            margin-bottom: 1.25rem;
+
+            .btn-grade,
+            .btn-depart {
+                background-color: $redBtnColor;
+                color: $light;
+                transition: $transition;
+
+                &:hover {
+                    background-color: rgb($redBtnColor, .7);
+                }
+            }
+        }
+        // Styling the input fields
+        .input-fields {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: .75rem;
+
+            .affairs-select {
+                width: 100%;
+                font-size: 1.5rem;
+                padding: .7rem 1rem;
+                border: none;
+                outline: none;
+                background-color: $light;
+                color: $gray;
+                border-radius: .25rem;
+            }
+
+            // input {
+            //     margin-bottom: 1rem;
+            // }
+
+            }
+            // styling the add button
+                .affairs-btns {
+                    display: flex;
+                    align-items: center;
+                    gap: .5rem;
+    
+                    > a {
+                        transition: $transition;
+                        padding: .5rem 2rem;
+                        font-size: 1.25rem;
+                        text-decoration: none;
+                        // border-radius: .25rem;
+    
+                        &.btn-addNew {
+                            background-color: $greenBtnColor;
+            
+                            &:hover {
+                                background-color: rgb($greenBtnColor, .7);
+                            }
+                        }
+    
+                        &.btn-edit {
+                            background-color: $blueBtnColor;
+
+                            &:hover {
+                                background-color: rgb($blueBtnColor, .7);
+                            }
+                        }
+                    }
+                }
+    }
+
+    //   Styling the list of links
+.affairs-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backgroundColor2;
+    padding: 2.25rem 1rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-left: .15rem solid $light;
+
+    .logo {
+        margin-bottom: 1.5rem;
+        width: 200px;
+    }
+
+    .affairs-links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $light;
+            text-decoration: none;
+            background-color: $blueBtnColor;
+            padding: .5rem 2rem;
+            margin-bottom: 1.25rem;
+            transition: $transition;
+
+            &:hover {
+                color: $lightBlue1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+}

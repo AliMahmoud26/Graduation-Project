@@ -1,0 +1,138 @@
+// Importing Partials files
+@use '../partials/variables' as *;
+
+// Styling the edit student page
+.main {
+    position: relative;
+
+    .edit-log-out {
+        position: absolute;
+        top: 14%;
+        left: 15%;
+        // background-color: $backgroundColor2;
+        padding: .5rem 1rem;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        cursor: pointer;
+
+        > a {
+            i {
+                color: $light;
+                font-size: 2rem;
+                transition: $transition;
+    
+                &:hover {
+                    color: $blueBtnColor;
+                }
+            }
+        }
+    }
+
+    .edit-date {
+        position: absolute;
+        top: 13%;
+        right: 30%;
+                
+        h3 {
+            // font-size: 1rem;
+            background-color: $blueBtnColor;
+            color: $light;
+            padding: .25rem 4rem;
+            border-radius: .25rem;
+            font-weight: normal;
+        }
+    }
+
+    form {
+        // Styling the search input
+        .search-wrapper {
+            margin-bottom: 1.25rem;
+            display: flex;
+            gap: .5rem;
+
+            .edit-search-btn {
+                background-color: $greenBtnColor;
+                color: $light;
+            }
+
+        }
+        // styling the student inputs
+        .student-inputs {
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-direction: row-reverse;
+            gap: .5rem;
+            
+            .btn {
+                color: $light;
+                transition: $transition;
+            }
+            
+            .btn-grade,
+            .btn-depart {
+                background-color: $redBtnColor;
+
+                &:hover {
+                    background-color: rgb($redBtnColor, .7);
+                }
+            }
+
+            .btn-add {
+                background-color: $greenBtnColor;
+
+                &:hover {
+                    background-color: rgb($greenBtnColor, .7);
+                }
+            }
+        }
+        // styling student Info
+        .student-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row-reverse;
+            margin-left: 5.5rem;
+            gap: .15rem;
+
+            input {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+
+    //   Styling the list of links
+.edit-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backgroundColor2;
+    padding: 4rem 1rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-left: .15rem solid $light;
+
+    .logo {
+        margin-bottom: 1.5rem;
+        width: 200px;
+    }
+
+    .edit-links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $light;
+            text-decoration: none;
+            background-color: $blueBtnColor;
+            padding: .75rem 2rem;
+            margin-bottom: 1rem;
+            transition: $transition;
+
+            &:hover {
+                color: $lightBlue1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+}

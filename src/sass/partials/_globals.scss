@@ -1,0 +1,56 @@
+// Importing other partials files
+@use './variables' as *;
+
+// Global Styling
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: {
+        size: 16px;
+        family: 'Arial', sans-serif;
+    }
+}
+
+// Main Element Styling
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+// Form Elemet Styling
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 53.3rem;
+    background-color: $backgroundColor2;
+    padding: 4rem 1.25rem;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+    box-shadow: .5rem .5rem .75rem rgba(0 0 0 / 40%);
+    // border-top-right-radius: 0;
+    // border-bottom-right-radius: 0;
+
+    > h1 {
+        color: #fff;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.btn {
+    color: $light;
+    cursor: pointer;
+}
+
+li {
+    list-style: none;
+}
+
+input {
+    outline: none;
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Add Students</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../../dist/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+</head>
+<body>
+    <main id="main" class="main">
+        <!-- Log Out and History section -->
+        <div class="add-log-out icon"><a href="userLogin.html"><i class="fa-solid fa-power-off"></i></a></div>
+        <!-- This div shows the current date -->
+        <div class="add-date"><h3>08/06/2024 - Saturday</h3></div>
+        <!-- Form -->
+        <form method="post" class="form-wrapper" id="form-wrapper">
+            <!-- date -->
+            <!-- <div class="date"><h3>20/5/2024 - Monday</h3></div> -->
+            <!-- The header of the form page -->
+            <h1>Add Students</h1>
+            <!-- Creating holder div for page's buttons -->
+            <div class="btns-holder">
+                <button type="button" class="affairs-btn btn">إدارة شؤون الطلاب</button>
+                <button type="button" class="add-student-btn btn">أضف عضو</button>
+            </div>
+            <!--  -->
+         <div class="input-fields">
+            <div class="left-fields">
+                <input id="name" type="text" placeholder="الاسم">
+                <input id="nationalId" type="text" placeholder="الرقم القومي">
+            </div>
+            <div class="right-fields">
+                <!-- <input type="text" placeholder="الشعبة"> -->
+                <!-- <input type="text" placeholder=" تحميل "> -->
+                <!-- <input type="text" placeholder="الفرقة"> -->
+                <select id="department" class="add-select department">
+                    <option value="القسم">القسم</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Accounting and Adminstration">Accounting and Adminstration</option>
+                    <option value="Systems and Information">Systems and Information</option>
+                </select>
+                <select id="gradeYear" class="add-select grade-year">
+                    <option value="الفرقة">الفرقة</option>
+                    <option value="First Grade">First Year</option>
+                    <option value="Second Grade">Second Year</option>
+                    <option value="Third Grade">Third Year</option>
+                    <option value="Fourth Grade">Fourth Year</option>
+                </select>
+            </div>
+        </div>
+        <div class="btns-holder">
+            <button type="button" id="btn-add-student" class="btn-add-student btn">اضف طالب</button>
+            <span class="message">تم الحفظ </span>
+            <button type="button" id="btn-download" class="btn-download btn">تحميل Excel</button>
+        </div>
+        </form>
+    
+        <!-- List of links -->
+        <div class="add-menu" id="links-list">
+            <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+
+            <div class="add-links list-links">
+                <a href="lectureManagement.html">الرئيسية</a>
+                <a href="addStudents.html">اضافة طالب جديد</a>
+                <a href="editStudents.html">إدارة سجلات الطلاب</a>
+                <a href="studentAffairs.html">إدارة شئون الطلاب</a>
+                <a href="facultyManagement.html">إدارة أعضاء هيئة التدريس </a>
+                <!-- <a href="studentAffairs.html">إدارة الدوام والدراسة</a> -->
+                <!-- <a href="addingMembers.html">تعديل سجلات الطلاب</a> -->
+            </div>
+        </div>
+    </main>
+    <script>
+        const saveBtn = document.querySelector('.btn-add-student');
+        const savedMsg = document.querySelector('.message');
+
+        saveBtn.addEventListener('click', () => {
+            savedMsg.classList.add('show')
+        })
+
+        // Excel file download
+function downloadExcel() {
+    const name = document.getElementById('name').value;
+    const nationalId = document.getElementById('nationalId').value;
+    const department = document.getElementById('department').value;
+    const gradeYear = document.getElementById('gradeYear').value;
+
+    const data = [
+        ['اسم', 'الرقم القومي', 'القسم', 'الفرقة'],
+        [name, nationalId, department, gradeYear]
+    ];
+
+    const worksheet = XLSX.utils.aoa_to_sheet(data);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Students");
+
+    XLSX.writeFile(workbook, 'students.xlsx');
+}
+
+document.getElementById('btn-download').addEventListener('click', downloadExcel);
+    </script>
+</body>
+</html>

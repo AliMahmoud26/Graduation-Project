@@ -1,0 +1,124 @@
+// Importing Partials files
+@use '../partials/variables' as *;
+
+// Styling faculty management page
+.main {
+    position: relative;
+
+    .faculty-log-out {
+        position: absolute;
+        top: 14%;
+        left: 15%;
+        // background-color: $backgroundColor2;
+        padding: .5rem 1rem;
+        border-top-left-radius: .25rem;
+        border-bottom-left-radius: .25rem;
+        cursor: pointer;
+
+        > a {
+            i {
+                color: $light;
+                font-size: 2rem;
+                transition: $transition;
+    
+                &:hover {
+                    color: $blueBtnColor;
+                }
+            }
+        }
+    }
+
+    .faculty-date {
+        position: absolute;
+        top: 13%;
+        right: 30%;
+                
+        h3 {
+            // font-size: 1rem;
+            background-color: $blueBtnColor;
+            color: $light;
+            padding: .25rem 4rem;
+            border-radius: .25rem;
+            font-weight: normal;
+        }
+    }
+
+    form {
+        // Styling the faculty button
+        .faculty-btn {
+            background-color: $blueBtnColor;
+            color: $light;
+            transition: $transition;
+            margin-bottom: 1.25rem;
+
+            &:hover {
+                background-color: rgb($blueBtnColor, .7);
+            }
+        }
+        // styling the search button and input field
+        .search-btn {
+            display: flex;
+            flex-direction: row-reverse;
+            gap: .3rem;
+            margin-bottom: 1.5rem;
+
+            .btn-search {
+                background-color: $greenBtnColor;
+                color: $light;
+                transition: $transition;
+
+                &:hover {
+                    background-color: rgb($greenBtnColor, .7);
+                }
+            }
+        }
+        // Styling the faculty member information
+        .faculty-details {
+            background-color: $light;
+            border-radius: .25rem;
+            padding: .75rem 1.5rem;
+            width: 60%;
+            text-align: end;
+
+            > p {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    // Styling the list of links
+.faculty-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $backgroundColor2;
+    padding: 4.5rem 1rem;
+    border-top-right-radius: .25rem;
+    border-bottom-right-radius: .25rem;
+    border-left: .15rem solid $light;
+
+    .logo {
+        margin-bottom: 1.5rem;
+        width: 200px;
+    }
+
+    .faculty-links {
+        display: flex;
+        flex-direction: column;
+
+        a {
+            color: $light;
+            text-decoration: none;
+            background-color: $blueBtnColor;
+            padding: .62rem 2rem;
+            margin-bottom: 1rem;
+            transition: $transition;
+
+            &:hover {
+                color: $lightBlue1;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+}

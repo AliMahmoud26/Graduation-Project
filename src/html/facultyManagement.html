@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Faculty Management</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="../../dist/style.css">
+</head>
+<body>
+<main id="main" class="main">
+    <!-- Log Out and History section -->
+    <div class="faculty-log-out icon"><a href="userLogin.html"><i class="fa-solid fa-power-off"></i></a></div>
+    <!-- This div shows the current date -->
+    <div class="faculty-date"><h3>08/06/2024 - Saturday</h3></div>
+    <!-- Form -->
+    <form method="post" class="form-wrapper" id="form-wrapper">
+        <!-- The header of the adding members form page -->
+        <h1>Faculty Management</h1>
+        <!-- list of faculty members -->
+        <button type="button" class="btn faculty-btn">أعضاء هيئة التدريس</button>
+        <!-- Search btn -->
+        <div class="search-btn">
+            <input type="text" placeholder="البحث بالرقم القومي أو اسم العضو">
+            <button type="button" class="btn btn-search">بحث</button>
+        </div>
+        <!-- Faculty members details -->
+        <div class="faculty-details">
+            <p> :الاسم</p>
+            <p> :القسم</p>
+            <p> :الرقم القومي</p>
+            <p> :عدد المواد المسجلة</p>
+        </div>
+    </form>
+
+    <!-- List of links -->
+    <div class="faculty-menu" id="links-list">
+        <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+
+        <div class="faculty-links list-links">
+            <a href="lectureManagement.html">الرئيسية</a>
+            <a href="addStudents.html">اضافة طالب جديد</a>
+            <a href="editStudents.html">إدارة سجلات الطلاب</a>
+                <a href="studentAffairs.html">إدارة شئون الطلاب</a>
+                <a href="facultyManagement.html">إدارة أعضاء هيئة التدريس </a>
+                <!-- <a href="studentAffairs.html">إدارة الدوام والدراسة</a> -->
+                <!-- <a href="addingMembers.html">تعديل سجلات الطلاب</a> -->
+        </div>
+    </div>
+</main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link rel="stylesheet" href="../../dist/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- صفحة تسجيل الدخول -->
+    <main class="main">
+        <div class="login-container">
+            <form action="lectureManagement.html" method="POST">
+                <img src="../../public/images/logo png 1.jpg" class="logo" alt="Academia Navigator Logo">
+                <input type="text" class="login-username" id="username" name="username" placeholder="اسم المستخدم">
+                <input type="password" class="login-password" id="password" name="password" placeholder="كلمة المرور">
+                <a href="lectureManagement.html" class="submit-btn">تسجيل الدخول</a>
+                <h4 class="error-msg" id="error"><i class="fa-solid fa-triangle-exclamation alert"></i>يرجي كتابة البيانات الصحيحة</h4>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        const loginBtn = document.querySelector('.submit-btn');
+        const errorMsg = document.querySelector('.error-msg');
+        
+        loginBtn.addEventListener('click', (e) => {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value.trim();
+            // IF condition that checks if the fields are empty then it's going to show the error message and if it's not it will direct the user to the main page
+            if (username === '' || password === '') {
+                e.preventDefault(); // Preventing the user from joining
+                errorMsg.classList.add('show');
+            } else {
+                errorMsg.classList.remove('show');
+            }
+        })
+    </script>
+</body>
+</html>
+    
